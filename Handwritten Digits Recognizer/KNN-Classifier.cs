@@ -11,6 +11,8 @@ namespace Handwritten_Digits_Recognizer
         
         private byte[][] trainingSetFeaturesVectors;
         private byte[] trainingSetClasses;
+        private double[][] classesMeans;
+        private int[] classesCount;
         private int num_of_classes;
 
         public KNN_Classifier(byte[][]trainingSetFeaturesVectors, byte[]trainingSetClasses, int num_of_classes)

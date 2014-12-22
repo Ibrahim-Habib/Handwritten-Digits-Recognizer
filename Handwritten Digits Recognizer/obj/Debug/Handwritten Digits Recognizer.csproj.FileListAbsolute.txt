@@ -1,0 +1,10 @@
+C:\Users\TEC\Documents\Visual Studio 2012\Projects\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Handwritten Digits Recognizer.exe.config
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Handwritten Digits Recognizer.exe.config
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.csprojResolveAssemblyReference.cache
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten_Digits_Recognizer.GUI.resources
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten_Digits_Recognizer.Properties.Resources.resources
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.csproj.GenerateResource.Cache
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Handwritten Digits Recognizer.exe
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Handwritten Digits Recognizer.pdb
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.exe
+D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.pdb

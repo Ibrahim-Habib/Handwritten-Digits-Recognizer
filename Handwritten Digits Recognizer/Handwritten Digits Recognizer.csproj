@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bayesian Classifier.cs" />
+    <Compile Include="Classifier.cs" />
     <Compile Include="EquationsCalculator.cs" />
     <Compile Include="FileReader.cs" />
     <Compile Include="GUI.cs">

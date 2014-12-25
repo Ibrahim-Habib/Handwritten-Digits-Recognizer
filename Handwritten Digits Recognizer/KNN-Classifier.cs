@@ -6,29 +6,87 @@ using System.Threading.Tasks;
 
 namespace Handwritten_Digits_Recognizer
 {
-    class KNN_Classifier 
+    class KNN_Classifier:Classifier
     {
         
-        private byte[][] trainingSetFeaturesVectors;
-        private byte[] trainingSetClasses;
         private double[][] classesMeans;
         private int[] classesCount;
-        private int num_of_classes;
-
-        public KNN_Classifier(byte[][]trainingSetFeaturesVectors, byte[]trainingSetClasses, int num_of_classes)
+        
+        public KNN_Classifier(byte[][]trainingSetFeaturesVectors, byte[]trainingSetClasses, int num_of_classes):base(trainingSetFeaturesVectors, trainingSetClasses, num_of_classes)
         {
             this.trainingSetFeaturesVectors = trainingSetFeaturesVectors;
             this.trainingSetClasses = trainingSetClasses;
             this.num_of_classes = num_of_classes;
+            if(trainingSetFeaturesVectors.Length > 0)
+                this.num_of_features = trainingSetFeaturesVectors[0].Length;
+
+            classesCount = new int[num_of_classes];
+            classesMeans = new double[num_of_classes][];
+            for (int i = 0; i < num_of_classes; i++)
+            {
+                classesMeans[i] = new double[num_of_features];
+            }
+
+            for (int i = 0; i < trainingSetClasses.Length; i++)
+            {
+                classesCount[trainingSetClasses[i]]++;
+                for (int j = 0; j < trainingSetFeaturesVectors[i].Length; j++)
+                {
+                    classesMeans[trainingSetClasses[i]][j] += trainingSetFeaturesVectors[i][j];
+                }
+            }
+
+            for (int i = 0; i < num_of_classes; i++)
+            {
+                for (int j = 0; j < num_of_features; j++)
+                {
+                    classesMeans[i][j] /= classesCount[i];
+                }
+            }
+
         }
-        
+
+         public override int classify(byte[] sampleFeaturesVector)
+        {
+            double[] distance = new double[num_of_classes];
+            double minDistance = 0;
+            int result = 0;
+            for (int i = 0; i < classesMeans.Length; i++)
+            {
+                distance[i] = EquationsCalculator.EculidianDistance(classesMeans[i], sampleFeaturesVector);
+                if (i == 0)
+                    minDistance = distance[i];
+                else
+                    minDistance = Math.Min(minDistance, distance[i]);
+            }
+
+            int c = 0;
+            for (int i = 0; i < distance.Length; i++)
+            {
+                if (distance[i] == minDistance)
+                {
+                    result = i;
+                    c++;
+                }
+            }
+
+            if (c > 1)
+                result = num_of_classes;
+
+
+            return result;
+        }
+
         public int classifySample(int K, byte[] sampleFeaturesVector)
         {
             //list are used here because there will be a lot of insertion and deleting operations
             List<double> nearestNeighboursDist = new List<double>();
             List<int> nearestNeighboursClasses = new List<int>();
             int result = 0;
-            
+
+          
+
+
             #region find K nearest neighbours
             double distance;
             for (int trainingIndex = 0; trainingIndex < trainingSetClasses.Count(); trainingIndex++)

@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MathWorks.MATLAB.NET.Arrays;
+using MathWorks.MATLAB.NET.Utility;
+using DigitRecognizer;
+
 
 namespace Handwritten_Digits_Recognizer
 {
     static class EquationsCalculator
     {
+        private static MatrixOperations mat = new MatrixOperations();
         public static double EculidianDistance(byte[] X, byte[] Y)
         {
             double res = 0;
@@ -19,9 +24,32 @@ namespace Handwritten_Digits_Recognizer
             res = Math.Sqrt(res);
             return res;
         }
+        //public static double EculidianDistancewithMax(byte[] X, byte[] Y, int maxDistance)
+        //{
+        //    double res = 0;
+        //    for (int i = 0; i < X.Count(); i++)
+        //    {
+        //        res += (X[i] - Y[i]) * (X[i] - Y[i]);
+        //        if (maxDistance < Math.Sqrt(res))
+        //            break;
+        //    }
+
+        //    res = Math.Sqrt(res);
+        //    return res;
+        //}
 
         public static double EculidianDistance(double[] X, byte[] Y)
         {
+            //double[] temp = new double[Y.Length];
+            //for (int i = 0; i < temp.Length; i++)
+            //{
+            //    temp[i] = (double)Y[i];
+            //}
+
+            //MWNumericArray arr1 = X;
+            //MWNumericArray arr2 = temp;
+            //MWArray res = mat.eculidean_distance(arr1, arr2);
+            //return double.Parse(res.ToString());
             double res = 0;
             for (int i = 0; i < X.Count(); i++)
             {

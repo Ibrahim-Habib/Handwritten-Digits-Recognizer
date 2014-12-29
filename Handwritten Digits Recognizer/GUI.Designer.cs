@@ -56,6 +56,8 @@
             this.Picture = new System.Windows.Forms.DataGridViewImageColumn();
             this.ExpectedClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numOfSamplesTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.confusionMatrixDataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -68,9 +70,9 @@
             this.ClassificationMethodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClassificationMethodComboBox.FormattingEnabled = true;
             this.ClassificationMethodComboBox.Items.AddRange(new object[] {
-            "Nearest Mean",
+            "Nearest Centroid",
             "KNN"});
-            this.ClassificationMethodComboBox.Location = new System.Drawing.Point(172, 38);
+            this.ClassificationMethodComboBox.Location = new System.Drawing.Point(171, 12);
             this.ClassificationMethodComboBox.Name = "ClassificationMethodComboBox";
             this.ClassificationMethodComboBox.Size = new System.Drawing.Size(121, 21);
             this.ClassificationMethodComboBox.TabIndex = 1;
@@ -79,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 41);
+            this.label1.Location = new System.Drawing.Point(45, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 2;
@@ -266,7 +268,7 @@
             this.ClassificationGridView.Location = new System.Drawing.Point(6, 3);
             this.ClassificationGridView.Name = "ClassificationGridView";
             this.ClassificationGridView.ReadOnly = true;
-            this.ClassificationGridView.Size = new System.Drawing.Size(956, 150);
+            this.ClassificationGridView.Size = new System.Drawing.Size(956, 346);
             this.ClassificationGridView.TabIndex = 0;
             // 
             // ImageNumber
@@ -299,11 +301,29 @@
             this.Result.Name = "Result";
             this.Result.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(42, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Number of Testing Images";
+            // 
+            // numOfSamplesTextBox
+            // 
+            this.numOfSamplesTextBox.Location = new System.Drawing.Point(181, 39);
+            this.numOfSamplesTextBox.Name = "numOfSamplesTextBox";
+            this.numOfSamplesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numOfSamplesTextBox.TabIndex = 10;
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 459);
+            this.Controls.Add(this.numOfSamplesTextBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.overAllAccuracyTextBox);
             this.Controls.Add(this.label2);
@@ -352,6 +372,8 @@
         private System.Windows.Forms.DataGridViewImageColumn Picture;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpectedClass;
         private System.Windows.Forms.DataGridViewTextBoxColumn Result;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox numOfSamplesTextBox;
 
     }
 }

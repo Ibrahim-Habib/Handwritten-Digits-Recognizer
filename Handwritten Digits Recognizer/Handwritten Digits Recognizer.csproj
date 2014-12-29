@@ -35,14 +35,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bluebit.MatrixLibrary, Version=6.1.0.0, Culture=neutral, PublicKeyToken=c915370950fbbd9f, processorArchitecture=AMD64" />
-    <Reference Include="DigitRecognizer">
-      <HintPath>..\..\..\..\..\..\..\MATLAB\DigitRecognizer\distrib\DigitRecognizer.dll</HintPath>
-    </Reference>
-    <Reference Include="MWArray, Version=2.9.1.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\MATLAB\R2009b\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,9 +45,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Untitled1">
-      <HintPath>..\..\..\..\..\..\..\MATLAB\Untitled1\distrib\Untitled1.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bayesian Classifier.cs" />
@@ -96,17 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="MLApp">
-      <Guid>{C36E46AB-6A81-457B-9F91-A7719A06287F}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

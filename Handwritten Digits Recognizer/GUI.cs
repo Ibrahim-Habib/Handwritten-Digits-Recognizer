@@ -9,8 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-using MathWorks.MATLAB.NET.Arrays;
-using MathWorks.MATLAB.NET.Utility;
 
 namespace Handwritten_Digits_Recognizer
 {
@@ -33,18 +31,18 @@ namespace Handwritten_Digits_Recognizer
             // 2. uncompress the downloaded files
             // 3. move the files to the following folder in the project "Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug"
 
-            //trainingImages = fr.readFeaturesVectors("train-images.idx3-ubyte", 60000);
-            //trainingLabels = fr.readLables("train-labels.idx1-ubyte", 60000);
-            //testingImages = fr.readFeaturesVectors("t10k-images.idx3-ubyte", 10000);
-            //testingLabels = fr.readLables("t10k-labels.idx1-ubyte", 10000);
+            trainingImages = fr.readFeaturesVectors("train-images.idx3-ubyte", 60000);
+            trainingLabels = fr.readLables("train-labels.idx1-ubyte", 60000);
+            testingImages = fr.readFeaturesVectors("t10k-images.idx3-ubyte", 10000);
+            testingLabels = fr.readLables("t10k-labels.idx1-ubyte", 10000);
 
-            trainingImages = fr.readFeaturesVectors("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\train-images.idx3-ubyte", 60000);
-            trainingLabels = fr.readLables("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\train-labels.idx1-ubyte", 60000);
-            testingImages = fr.readFeaturesVectors("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\t10k-images.idx3-ubyte", 10000);
-            testingLabels = fr.readLables("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\t10k-labels.idx1-ubyte", 10000);
+            //trainingImages = fr.readFeaturesVectors("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\train-images.idx3-ubyte", 60000);
+            //trainingLabels = fr.readLables("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\train-labels.idx1-ubyte", 60000);
+            //testingImages = fr.readFeaturesVectors("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\t10k-images.idx3-ubyte", 10000);
+            //testingLabels = fr.readLables("D:\\FCIS\\4th year\\First Term\\Pattern Recognition\\Project\\t10k-labels.idx1-ubyte", 10000);
 
             Classifier classifier;
-            if (ClassificationMethodComboBox.Text == "KNN" || ClassificationMethodComboBox.Text == "Nearest Mean")
+            if (ClassificationMethodComboBox.Text == "KNN" || ClassificationMethodComboBox.Text == "Nearest Centroid")
             {
                 classifier = new KNN_Classifier(trainingImages, trainingLabels, 10);
             }
@@ -58,12 +56,16 @@ namespace Handwritten_Digits_Recognizer
                 confusionMatrix[i] = new int[11];
 
             int correctLabel, classifierResult;
-            int testedNum = 10000;
+            int testedNum = int.Parse(numOfSamplesTextBox.Text);
+
+            testedNum = Math.Min(testedNum, 10000);
+
+            //int testedNum = 10000;
             
-            if (ClassificationMethodComboBox.Text == "KNN")
-            {
-                testedNum = 20;
-            }
+            //if (ClassificationMethodComboBox.Text == "KNN")
+            //{
+            //    testedNum = 10;
+            //}
 
             Bitmap[] bm = new Bitmap[testedNum];
             for (int i = 0; i < testedNum; i++)
@@ -71,6 +73,7 @@ namespace Handwritten_Digits_Recognizer
                 bm[i] = new Bitmap(28, 28);
             }
 
+            ClassificationGridView.Rows.Clear();
             for (int i = 0; i < testedNum; i++)
             {
                 
@@ -118,12 +121,14 @@ namespace Handwritten_Digits_Recognizer
 
             //confusionMatrixDataGridView.Columns.Add(new DataGridViewColumn() { HeaderText = "Rejection", CellTemplate = new DataGridViewTextBoxCell() });
 
+            confusionMatrixDataGridView.Rows.Clear();
 
             for (int i = 0; i < 10; i++)
             {
                 confusionMatrixDataGridView.Rows.Add(new DataGridViewRow());
                 confusionMatrixDataGridView.Rows[i].Cells[0].Value = string.Concat("Class ", (i).ToString());
             }
+
             int totalSum = 0;
             int sum = 0;
             for (int row = 0; row < 10; row++)

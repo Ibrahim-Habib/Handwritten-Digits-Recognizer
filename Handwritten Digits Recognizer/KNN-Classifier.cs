@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MathWorks.MATLAB.NET.Arrays;
-using MathWorks.MATLAB.NET.Utility;
-using DigitRecognizer;
 
 
 namespace Handwritten_Digits_Recognizer
 {
     class KNN_Classifier:Classifier
     {
-        MatrixOperations mat;
         private double[][] classesMeans;
         private int[] classesCount;
         
         public KNN_Classifier(byte[][]trainingSetFeaturesVectors, byte[]trainingSetClasses, int num_of_classes):base(trainingSetFeaturesVectors, trainingSetClasses, num_of_classes)
         {
-            mat = new MatrixOperations();
             this.trainingSetFeaturesVectors = trainingSetFeaturesVectors;
             this.trainingSetClasses = trainingSetClasses;
             this.num_of_classes = num_of_classes;

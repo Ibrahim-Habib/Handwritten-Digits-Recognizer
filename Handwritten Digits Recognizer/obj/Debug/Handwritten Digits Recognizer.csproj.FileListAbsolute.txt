@@ -8,12 +8,3 @@ D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recog
 D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Handwritten Digits Recognizer.pdb
 D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.exe
 D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.pdb
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Bluebit.MatrixLibrary.dll
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Bluebit.MatrixLibrary.xml
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\MWArray.dll
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\Untitled1.dll
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\MWArray.xml
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\ManagedCPPAPI.netmodule
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Interop.MLApp.dll
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\obj\Debug\Handwritten Digits Recognizer.csproj.ResolveComReference.cache
-D:\FCIS\4th year\First Term\Pattern Recognition\Project\Handwritten Digits Recognizer\Handwritten Digits Recognizer\bin\Debug\DigitRecognizer.dll

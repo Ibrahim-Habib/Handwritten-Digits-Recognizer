@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MathWorks.MATLAB.NET.Arrays;
-using MathWorks.MATLAB.NET.Utility;
-using DigitRecognizer;
+
 
 
 namespace Handwritten_Digits_Recognizer
 {
     static class EquationsCalculator
     {
-        private static MatrixOperations mat = new MatrixOperations();
         public static double EculidianDistance(byte[] X, byte[] Y)
         {
             double res = 0;
